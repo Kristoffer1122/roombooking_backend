@@ -5,6 +5,7 @@ export default async function UserTable() {
 	const { data: users, error } = await supabase
 		.from("users")
 		.select("*");
+	console.log("Users:", users);
 
 	if (error) {
 		console.error("Error fetching users:", error);
